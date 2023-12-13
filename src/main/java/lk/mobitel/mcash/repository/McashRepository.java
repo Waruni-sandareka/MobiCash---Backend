@@ -6,7 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import lk.mobitel.mcash.model.Wallet;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface McashRepository extends CrudRepository<Wallet,Long> {
 	@Query("SELECT w FROM Wallet w WHERE mobileno=:mobileno AND pin=:pin")
 	public Wallet getBalance(@Param(value="mobileno")int mobileno,@Param(value="pin")int pin);

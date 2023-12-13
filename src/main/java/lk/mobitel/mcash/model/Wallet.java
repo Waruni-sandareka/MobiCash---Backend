@@ -1,9 +1,9 @@
 package lk.mobitel.mcash.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 
+import jakarta.persistence.Entity;
 import lombok.Data;
+import jakarta.persistence.Id;
 
 @Data
 @Entity
